@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dog = {
+            name:'멍멍이',
+            age:2
+        }
+
+        console.log(dog.name,dog.age)
+        console.log(dog['name'],dog['age'])
+        console.log(dog[0],dog[1])//undefined
+
+        const{name,age} = dog;
+        console.log(name,age)
+
+        const data = {
+            name2:'홍길동',
+            age2:20,
+            kor:100,
+            eng:85,
+            math:90
+        }
+
+        console.log(data.name2, data.kor, data.eng, data.math)
+        const{name2, age2, kor, eng, math} = data;
+        //const{name2, age2} = data; 이런식으로 부분적으로 줄 수도 있다.
+        console.log(name2, kor, eng, math);
+        //name과 age를 2로 잡아주어야 하는 이유는 구조분해할 때 변수명이 동일하면 에러나기 때문이다.
+    </script>
+</body>
+</html>
+
+<!-- 
+비구조 할당(구조분해)
+예) const object = {a:1, b:2, c:3}
+    const{a,b,c} = object 낱개로 받음
+ -->
